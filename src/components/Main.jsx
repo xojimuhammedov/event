@@ -1,10 +1,23 @@
-import React from "react";
-import useAxios from "../hooks/about-uses/useAxios";
+import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../url";
 import Img11 from "../assets/img11.png";
+import axios from "axios";
 const Main = () => {
-  const { resAbout } = useAxios();
-  console.log(resAbout)
+  const [resAbout, setResAbout] = useState([]);
+  useEffect(() => {
+    return async () => {
+      try {
+        const res = await axios.get(
+          "https://admin.lupinevent.com/api/about-uses?populate=*"
+        );
+        setResAbout(res.data.data);
+        console.log(res.data.data);
+      } catch (err) {
+        console.log(err);
+      } finally {
+      }
+    };
+  }, []);
   return (
     <div className="px-40 py-12 mt-4 mainContainer">
       <div className="container">
