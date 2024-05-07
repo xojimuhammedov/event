@@ -6,17 +6,15 @@ import axios from "axios";
 const SelectedService = () => {
   const [res, setRes] = useState([]);
   useEffect(() => {
-    return async () => {
-      try {
-        const res = await axios.get(
-          "https://admin.lupinevent.com/api/applications?populate=*"
-        );
+    axios
+      .get("https://admin.lupinevent.com/api/applications?populate=*")
+      .then((res) => {
         setRes(res.data.data);
-      } catch (err) {
+        console.log(res.data.data);
+      })
+      .catch((err) => {
         console.log(err);
-      } finally {
-      }
-    };
+      });
   }, []);
   return (
     <div className="selectedService px-40 pb-4">
