@@ -12,7 +12,6 @@
 .container {
   max-width: 1510px;
   margin: 0 auto;
-
 }
 
 .header-carousel {
@@ -86,7 +85,7 @@
 }
 
 .text-container {
-  background: rgba(235, 232, 232, 0.5)
+  background: rgba(235, 232, 232, 0.5);
 }
 
 .openMenu {
@@ -125,11 +124,22 @@
   }
 }
 
-
-
-@media(max-width:500px) {
+@media (max-width: 500px) {
   .navbar {
     display: none;
+  }
+
+  .selectedService {
+    padding: 10px !important;
+  }
+
+  .header-image {
+    height: 450px !important;
+    object-fit: cover;
+  }
+  .video {
+    height: 450px !important;
+    object-fit: cover;
   }
 
   .menuBar {
@@ -149,17 +159,19 @@
   }
 
   .cartWrapper {
-    padding: 10px 40px;
+    padding: 10px;
     gap: 100px;
   }
 
   .cartContainer {
     flex-direction: column;
-    gap: 80px;
+    gap: 10px;
   }
 
   .textContainer {
-    width: 250px;
+    width: 80%;
+    left: -10%;
+    right: 0;
   }
 
   .mainContainer {
@@ -171,7 +183,7 @@
     flex-direction: column;
   }
 
-  .mainWrapper>div {
+  .mainWrapper > div {
     width: 100%;
   }
 
@@ -180,7 +192,7 @@
   }
 
   .footerWrapper {
-    padding: 10px 40px;
+    padding: 10px;
     flex-direction: column;
     gap: 20px;
   }
@@ -192,7 +204,7 @@
   }
 
   .footer2Wrapper {
-    padding: 10px 40px;
+    padding: 10px;
   }
 
   .btn {
@@ -236,7 +248,7 @@
   }
 }
 
-@media(max-width:477px) {
+@media (max-width: 477px) {
   .btn {
     margin-left: 146px;
     margin-top: 5px;
@@ -251,13 +263,14 @@
   }
 }
 
-@media(max-width:455px) {
+@media (max-width: 455px) {
   .logo-img {
     display: none;
   }
 
   .menuBtn {
-    transform: translateX(157px);
+    position: relative;
+    left: 0;
   }
 
   .rek-container {
@@ -269,12 +282,12 @@
     margin-left: -339px;
     margin-top: 276px;
   }
-  .mainContainer{
-    padding: 10px 16px;
+  .mainContainer {
+    padding: 10px;
   }
 }
 
-@media(max-width:440px) {
+@media (max-width: 440px) {
   .btn {
     margin-left: 129px;
     margin-top: 12px;
@@ -288,27 +301,21 @@
     gap: 107px;
   }
 
-  .cartContainer {
-    gap: 130px;
-  }
-
   .textContainer {
-    margin-left: -21px;
+    margin-left: 0;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
-  .footerText{
+  .footerText {
     line-height: 1.5rem;
     font-size: 20px;
   }
 }
 
-@media(max-width:418px) {
+@media (max-width: 418px) {
   .btn {
     margin-left: 122px;
     margin-top: 19px;
-  }
-
-  .menuBtn {
-    transform: translateX(148px);
   }
 
   .rek-container {
@@ -326,11 +333,10 @@
 
   .textContainer {
     padding: 5px;
-    margin-left: -32px;
   }
 }
 
-@media(max-width:390px) {
+@media (max-width: 390px) {
   .rek-container {
     padding: 6px 5px;
     width: 215px;
@@ -352,7 +358,7 @@
   }
 }
 
-@media(max-width:380px) {
+@media (max-width: 380px) {
   .btn {
     margin-left: 110px;
     margin-top: 23px;
@@ -369,7 +375,7 @@
   }
 }
 
-@media(max-width:375px) {
+@media (max-width: 375px) {
   .rek-container {
     width: 180px;
     padding: 2px;
@@ -382,7 +388,7 @@
   }
 }
 
-@media(max-width:350px) {
+@media (max-width: 350px) {
   .btn {
     margin-left: 96px;
     margin-top: 30px;
@@ -400,15 +406,15 @@
   .textContainer {
     margin-left: -50px;
   }
-  .mainText{
+  .mainText {
     font-size: 15px;
   }
-  .mainBtn{
+  .mainBtn {
     font-size: 13px;
   }
 }
 
-@media(max-width:320px) {
+@media (max-width: 320px) {
   .btn {
     margin-left: 84px;
   }
