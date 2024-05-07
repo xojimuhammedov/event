@@ -5,18 +5,15 @@ import axios from "axios";
 const Main = () => {
   const [resAbout, setResAbout] = useState([]);
   useEffect(() => {
-    return async () => {
-      try {
-        const res = await axios.get(
-          "https://admin.lupinevent.com/api/about-uses?populate=*"
-        );
+    axios
+      .get("https://admin.lupinevent.com/api/about-uses?populate=*")
+      .then((res) => {
         setResAbout(res.data.data);
         console.log(res.data.data);
-      } catch (err) {
+      })
+      .catch((err) => {
         console.log(err);
-      } finally {
-      }
-    };
+      });
   }, []);
   return (
     <div className="px-40 py-12 mt-4 mainContainer">
