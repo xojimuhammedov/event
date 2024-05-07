@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Img10 from "../assets/img10.png";
 
-import useAxios from "../hooks/applications/useAxios";
 import { BASE_URL } from "../url";
+import axios from "axios";
 const SelectedService = () => {
-  const { res } = useAxios();
+  const [res, setRes] = useState([]);
+  useEffect(() => {
+    return async () => {
+      try {
+        const res = await axios.get(
+          "https://admin.lupinevent.com/api/applications?populate=*"
+        );
+        setRes(res.data.data);
+      } catch (err) {
+        console.log(err);
+      } finally {
+      }
+    };
+  }, []);
   return (
     <div className="selectedService px-40 pb-4">
       <div className="container">
