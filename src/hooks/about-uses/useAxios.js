@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 const useAxios = () => {
   const [resAbout, setResAbout] = useState([]);
   const [errorAbout, setErrorAbout] = useState("");
@@ -11,6 +11,7 @@ const useAxios = () => {
           "https://admin.lupinevent.com/api/about-uses?populate=*"
         );
         setResAbout(res.data.data);
+        console.log(res.data.data);
       } catch (err) {
         setErrorAbout(err.massage);
       } finally {

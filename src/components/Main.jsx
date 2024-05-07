@@ -4,6 +4,7 @@ import { BASE_URL } from "../url";
 import Img11 from "../assets/img11.png";
 const Main = () => {
   const { resAbout } = useAxios();
+  console.log(resAbout)
   return (
     <div className="px-40 py-12 mt-4 mainContainer">
       <div className="container">
