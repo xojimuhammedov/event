@@ -32,7 +32,7 @@ const Footer = () => {
               </h2>
             </div>
           </div>
-          <div className="px-40 flex items-center gap-2 mt-4">
+          <div className="px-40 flex items-center gap-4 mt-4">
             <a href="https://tiktok.com">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"
@@ -54,7 +54,9 @@ const Footer = () => {
               Hilal Yaşar Organizasyon
             </p>
             <p className="font-serif text-white text-[14px]">
-              Bersa Soft Web Tasarım Ve Yazılım Ajansı
+              <a target="_blank" href="https://t.me/Xojimuhammedov">
+                Site yaratıcısı
+              </a>
             </p>
           </div>
         </div>
