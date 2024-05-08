@@ -45,18 +45,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className=" bg-black border-t border-white  px-56 py-3 mt-4 footer2Wrapper">
-          <div className="container flex justify-between footerTextWrapper">
-            <p className="font-serif text-white text-[14px]">
-              Lupin Event Organizasyon
-            </p>
-            {/* <p className="font-serif text-white text-[14px]">
-              <a target="_blank" href="https://t.me/Xojimuhammedov">
-                Site yaratıcısı
-              </a>
-            </p> */}
-          </div>
-        </div>
       </div>
     </div>
   );
