@@ -122,7 +122,7 @@ const Header = () => {
         className="carousel slide header-carousel"
         data-bs-ride="carousel">
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="2000">
+          {/* <div className="carousel-item active" data-bs-interval="2000">
             <div className="video-container">
               <video
                 src={HeaderVide}
@@ -135,7 +135,7 @@ const Header = () => {
                 Hizmetleri İnceleyin
               </button>
             </div>
-          </div>
+          </div> */}
           <div className="carousel-item">
             <div className="img-container">
               <img src={Img1} className="d-block w-100" alt="header-img" />
