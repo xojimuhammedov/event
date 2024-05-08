@@ -1,6 +1,5 @@
 import React from "react";
 import Logo from "../assets/logo.png";
-import TiktokIcon from "../assets/tiktok.png";
 import InstagramIcon from "../assets/instagram.png";
 const Footer = () => {
   return (
