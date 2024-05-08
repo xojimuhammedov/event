@@ -48,16 +48,13 @@ const Footer = () => {
         <div className=" bg-black border-t border-white  px-56 py-3 mt-4 footer2Wrapper">
           <div className="container flex justify-between footerTextWrapper">
             <p className="font-serif text-white text-[14px]">
-              Copyright © 2024
+              Lupin Event Organizasyon
             </p>
-            <p className="font-serif text-white text-[14px]">
-              Hilal Yaşar Organizasyon
-            </p>
-            <p className="font-serif text-white text-[14px]">
+            {/* <p className="font-serif text-white text-[14px]">
               <a target="_blank" href="https://t.me/Xojimuhammedov">
                 Site yaratıcısı
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
