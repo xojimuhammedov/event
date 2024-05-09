@@ -17,11 +17,20 @@ const Footer = () => {
               </p>
               <ul className="text-center tracking-widest">
                 <li className="hover:cursor-pointer hover:text-gray-400">
-                  Lupineventt@gmail.com
+                  <a href="mailto:lupineventt@gmail.com">
+                    Lupineventt@gmail.com
+                  </a>
                 </li>
                 <li className="hover:cursor-pointer hover:text-gray-400">
                   {" "}
-                  0531 731 86 95
+                  <a href="tel:05317318695">0531 731 86 95</a>
+                </li>
+                <li className="hover:cursor-pointer hover:text-gray-400">
+                  {" "}
+                  <a
+                    href="tel:05461064158">
+                    0546 106 41 58
+                  </a>
                 </li>
               </ul>
             </div>
