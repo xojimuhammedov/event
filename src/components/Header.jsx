@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import HeaderVide from "../assets/video1.mp4";
 import Logo from "../assets/logo.png";
 import Img1 from "../assets/img1.jpg";
 import Img2 from "../assets/img2.png";
