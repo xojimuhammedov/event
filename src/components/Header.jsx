@@ -122,20 +122,6 @@ const Header = () => {
         className="carousel slide header-carousel"
         data-bs-ride="carousel">
         <div className="carousel-inner">
-          <div className="carousel-item active" data-bs-interval="2000">
-            <div className="video-container">
-              <video
-                src={HeaderVide}
-                controls
-                autoPlay
-                loop
-                muted
-                className="video"></video>
-              <button className="btn border border-white rounded-3xl absolute translate-x-[660px] -translate-y-[260px] hover:bg-black hover:text-[#8d8a8a] duration-300 text-[18px] hover:border hover:border-black">
-                Hizmetleri İnceleyin
-              </button>
-            </div>
-          </div>
           <div className="carousel-item">
             <div className="img-container">
               <img src={Img1} className="d-block w-100" alt="header-img" />

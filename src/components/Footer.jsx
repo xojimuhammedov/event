@@ -4,7 +4,7 @@ import InstagramIcon from "../assets/instagram.png";
 const Footer = () => {
   return (
     <div>
-      <div className="bg-[#222222] pt-6">
+      <div className="bg-[#222222] pt-6 pb-4">
         <div className="container">
           <div className="px-40 flex items-center justify-between footerWrapper">
             <div>
