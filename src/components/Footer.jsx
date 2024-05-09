@@ -13,15 +13,15 @@ const Footer = () => {
 
             <div className="text-white font-serif">
               <p className="text-center tracking-widest">
-                Mustafa Kemal Cad 15/A 34218 <br /> İstanbul/Bağcılar
+                İstanbulun heryerine hizmet sunmaktayız
               </p>
               <ul className="text-center tracking-widest">
                 <li className="hover:cursor-pointer hover:text-gray-400">
-                  info@hilalyasarevent.com
+                  Lupineventt@gmail.com
                 </li>
                 <li className="hover:cursor-pointer hover:text-gray-400">
                   {" "}
-                  +90 545 473 39 36
+                  0531 731 86 95
                 </li>
               </ul>
             </div>
@@ -32,14 +32,14 @@ const Footer = () => {
             </div>
           </div>
           <div className="px-40 flex items-center gap-4 mt-4">
-            <a href="https://tiktok.com">
+            <a href="https://www.tiktok.com/@lupineventorganizasyon?_t=8mCPKhwAWCj&_r=1">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"
                 className="w-[30px]"
                 alt=""
               />
             </a>
-            <a href="https://instagram.com">
+            <a href="https://www.instagram.com/lupinevent?igsh=MXNkZzczZnNoMm14OA==">
               <img src={InstagramIcon} className="w-[30px]" alt="" />
             </a>
           </div>
