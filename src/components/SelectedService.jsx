@@ -7,17 +7,16 @@ const SelectedService = () => {
   const [res, setRes] = useState([]);
   useEffect(() => {
     axios
-      .get("https://admin.lupinevent.com/api/applications?populate=*")
+      .get("https://admin.lupinevent.com/api/services?populate=*")
       .then((res) => {
         setRes(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => {
         console.log(err);
       });
   }, []);
   return (
-    <div className="selectedService px-40 pb-4">
+    <div id="service" className="selectedService px-40 pb-4">
       <div className="container">
         <div className="flex justify-center relative z-10">
           <img src={Img10} alt="img" />
@@ -34,13 +33,13 @@ const SelectedService = () => {
               </div>
               <div className="bg-[#f6f6f6] w-[400px] absolute z-30 -translate-y-12 translate-x-20 px-4 py-3 textContainer">
                 <h3 className="text-center font-serif text-[13px] text-[#333] mb-2">
-                  {item.attributes?.Organization}
+                  {item?.attributes?.Name}
                 </h3>
                 <p className="text-center font-serif text-[15px] text-[#2b333b]">
-                  {item.attributes?.Name}
+                  {item?.attributes?.Title}
                 </p>
                 <p className="text-center font-serif text-[12px] text-[#999]">
-                  {item.attributes?.Description}
+                  {item?.attributes?.Organization}
                 </p>
               </div>
             </div>

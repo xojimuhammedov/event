@@ -3,14 +3,16 @@ import Header from "./components/Header";
 import SelectedService from "./components/SelectedService";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 function App() {
   return (
     <div>
-      {/* <Header />
+      {/* <Header /> */}
+      <Home />
       <SelectedService />
       <Main />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

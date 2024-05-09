@@ -36,3 +36,52 @@
     transform: rotate(360deg);
   }
 }
+
+.header-images {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  z-index: 9999;
+  top: 50%;
+}
+.carousel-caption h1 {
+  font-size: 50px;
+  line-height: 55px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.carousel-caption p {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.main-image {
+  height: 500px;
+  width: 95%;
+  object-fit: cover;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 500px) {
+  .carousel-caption {
+    left: 0;
+    right: 0;
+  }
+
+  .footer-icons {
+    width: 50px !important;
+  }
+  .footer-links {
+    width: 50px;
+    display: flex;
+  }
+}

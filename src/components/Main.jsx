@@ -16,7 +16,7 @@ const Main = () => {
       });
   }, []);
   return (
-    <div className="px-40 py-12 mt-4 mainContainer">
+    <div id="about" className="px-40 py-12 mt-4 mainContainer">
       <div className="container">
         {resAbout.map((item, key) => (
           <div key={key} className="flex items-center mainWrapper">
@@ -24,6 +24,7 @@ const Main = () => {
               <img
                 src={`${BASE_URL}${item?.attributes?.Image?.data?.attributes?.url}`}
                 alt="HAYALLERİNİZİ BİRLİKTE YARATIYORUZ"
+                className="main-image"
               />
             </div>
             <div className="text-container w-6/12 px-4 py-5">

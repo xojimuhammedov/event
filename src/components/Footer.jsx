@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
 import InstagramIcon from "../assets/instagram.png";
+import axios from "axios";
 const Footer = () => {
+  const [res, setRes] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://admin.lupinevent.com/api/contacts")
+      .then((res) => {
+        setRes(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div>
-      <div className="bg-[#222222] pt-6 pb-4">
+      <div id="contact" className="bg-[#222222] pt-6 pb-4">
         <div className="container">
           <div className="px-40 flex items-center justify-between footerWrapper">
             <div>
@@ -13,23 +27,24 @@ const Footer = () => {
 
             <div className="text-white font-serif">
               <p className="text-center tracking-widest">
-                İstanbulun heryerine hizmet sunmaktayız
+                {res[0]?.attributes?.Address}
               </p>
               <ul className="text-center tracking-widest">
                 <li className="hover:cursor-pointer hover:text-gray-400">
-                  <a href="mailto:lupineventt@gmail.com">
-                    Lupineventt@gmail.com
+                  <a href={`mailto:${res[0]?.attributes?.Email}`}>
+                    {res[0]?.attributes?.Email}
                   </a>
                 </li>
                 <li className="hover:cursor-pointer hover:text-gray-400">
                   {" "}
-                  <a href="tel:05317318695">0531 731 86 95</a>
+                  <a href={`tel:${res[0]?.attributes?.PhoneNumber_One}`}>
+                    {res[0]?.attributes?.PhoneNumber_One}
+                  </a>
                 </li>
                 <li className="hover:cursor-pointer hover:text-gray-400">
                   {" "}
-                  <a
-                    href="tel:05461064158">
-                    0546 106 41 58
+                  <a href={`tel:${res[0]?.attributes?.PhoneNumber_Two}`}>
+                    {res[0]?.attributes?.PhoneNumber_Two}
                   </a>
                 </li>
               </ul>
@@ -41,15 +56,25 @@ const Footer = () => {
             </div>
           </div>
           <div className="px-40 flex items-center gap-4 mt-4">
-            <a href="https://www.tiktok.com/@lupineventorganizasyon?_t=8mCPKhwAWCj&_r=1">
+            <a
+              className="footer-links"
+              target="_blank"
+              href={`https://www.tiktok.com/${res[0]?.attributes?.TikTok}`}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"
-                className="w-[30px]"
+                className="w-[50px] footer-icons"
                 alt=""
               />
             </a>
-            <a href="https://www.instagram.com/lupinevent?igsh=MXNkZzczZnNoMm14OA==">
-              <img src={InstagramIcon} className="w-[30px]" alt="" />
+            <a
+              className="footer-links"
+              target="_blank"
+              href={`https://www.instagram.com/${res[0]?.attributes?.Instagram}`}>
+              <img
+                src={InstagramIcon}
+                className="w-[50px] footer-icons"
+                alt=""
+              />
             </a>
           </div>
         </div>

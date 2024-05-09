@@ -11,16 +11,17 @@ const Header = () => {
         <div className="container">
           <ul className="flex gap-3 items-center">
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              ANASAYFA
+              <a href="#home">ANASAYFA</a>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              HAKKIMIZDA
+              <a href="#about">HAKKIMIZDA</a>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
               <img src={Logo} className="w-[250px]" />
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown">
-              <p className="dropp py-2">HİZMETLERİMİZ</p>
+              {/* <p className="dropp py-2">HİZMETLERİMİZ</p> */}{" "}
+              <a href="#service">HİZMETLERİMİZ</a>
               {/* <ul class="dropdown-content px-3 py-2 ">
                 <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
                   Kina Organizasyonu
@@ -40,7 +41,7 @@ const Header = () => {
               </ul> */}
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              İLETİŞİM
+              <a href="#contact">İLETİŞİM</a>
             </li>
           </ul>
         </div>
@@ -98,7 +99,7 @@ const Header = () => {
             </ul>
           </li>
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-            İLETİŞİM
+            <a href="#contact">İLETİŞİM</a>
           </li>
         </ul>
         <button
@@ -114,62 +115,6 @@ const Header = () => {
             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
             <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
           </svg>
-        </button>
-      </div>
-      <div
-        id="carouselExampleAutoplaying"
-        className="carousel slide header-carousel"
-        data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item">
-            <div className="img-container">
-              <img src={Img1} className="d-block w-100" alt="header-img" />
-            </div>
-            <div className="rek-container z-30 absolute w-[640px] translate-x-[445px] -translate-y-[500px]">
-              <h2 className="text-[23px] rek-text font-extrabold text-black font-serif text-center pt-2">
-                EN MUTLU GÜNÜNÜZÜ GÜZELLEŞTİRİYORUZ
-              </h2>
-              <p className="font-bold text-black text-center text-[18px] my-2.5 rek-text2">
-                Düğün, Nişan, Doğum Günü Organizasyonları
-              </p>
-              <div className="flex justify-center">
-                <button className="border border-white  px-4 py-2 rounded-3xl hover:bg-black hover:text-[#8d8a8a] duration-300 text-[18px] hover:border-0 rek-btn">
-                  Hizmetleri İnceleyin
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="carousel-item">
-            <img src={Img2} className="d-block w-100" alt="header image" />
-            <div className="absolute translate-x-[400px] -translate-y-[400px] textDiv">
-              <h2 className="text-white text-[33px] font-extrabold textDiv-text1">
-                EN MUTLU GÜNÜNÜZÜ GÜZELLEŞTİRİYORUZ
-              </h2>
-              <p className="text-white text-center font-semibold text-[25px] textDiv-text2">
-                Düğün, Nişan, Doğum Günü Organizasyonları
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev">
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next">
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </header>
