@@ -31,7 +31,7 @@ const Main = () => {
               <h2 className="text-center font-serif leading-6 text-[20px] text-[#434343] mainText">
                 {item?.attributes?.Title}
               </h2>
-              <p className="text-base font-serif my-3 text-[#434343]">
+              <p className="text-xs font-serif my-3 text-[#434343]">
                 {item?.attributes?.Description}
               </p>
             </div>

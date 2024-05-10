@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.png";
-import Img1 from "../assets/img1.jpg";
-import Img2 from "../assets/img2.png";
 import "../index.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [openMenuBar, setOpenMenuBar] = useState(false);
+
+  const [res, setRes] = useState([]);
+  useEffect(() => {
+    axios
+      .get("https://admin.lupinevent.com/api/services")
+      .then((res) => {
+        setRes(res.data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
     <header className="header relative">
       <nav className="absolute z-10 translate-x-[385px] navbar">
@@ -17,28 +29,21 @@ const Header = () => {
               <a href="#about">HAKKIMIZDA</a>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              <img src={Logo} className="w-[250px]" />
+              <Link to={"/"}>
+                <img alt="" src={Logo} className="w-[250px]" />
+              </Link>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown">
-              {/* <p className="dropp py-2">HİZMETLERİMİZ</p> */}{" "}
-              <a href="#service">HİZMETLERİMİZ</a>
-              {/* <ul class="dropdown-content px-3 py-2 ">
-                <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  Kina Organizasyonu
-                </li>
-                <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                  Nisan Ve Söz Organizasyonu
-                </li>
-                <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                  Evlenme Teklifi Organizasyonu
-                </li>
-                <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                  Beklarliga Veda
-                </li>
-                <li className="text-xs font-light text-center  py-2 hover:text-[#403e3e]">
-                  İsteme Organizasyonu
-                </li>
-              </ul> */}
+              <p className="dropp py-2">HİZMETLERİMİZ</p>{" "}
+              <ul class="dropdown-content px-3 py-2 ">
+                {res?.map((item) => (
+                  <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services/${item?.id}`}>
+                      {item?.attributes?.Title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
               <a href="#contact">İLETİŞİM</a>

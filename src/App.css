@@ -61,9 +61,20 @@
   margin: 15px 0;
 }
 
+.selected-image {
+  height: 500px !important;
+  width: 450px !important;
+}
+
 .main-image {
   height: 500px;
   width: 95%;
+  object-fit: cover;
+}
+
+.main-image-about{
+  height: 550px;
+  width: 550px;
   object-fit: cover;
 }
 

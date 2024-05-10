@@ -29,9 +29,10 @@ const SelectedService = () => {
                 <img
                   src={`${BASE_URL}${item?.attributes?.Image?.data?.attributes?.url}`}
                   alt="Hina rituals"
+                  className="selected-image"
                 />
               </div>
-              <div className="bg-[#f6f6f6] w-[400px] absolute z-30 -translate-y-12 translate-x-20 px-4 py-3 textContainer">
+              <div className="bg-[#f6f6f6] w-[400px] absolute z-30 -translate-y-12 translate-x-6 px-4 py-3 textContainer">
                 <h3 className="text-center font-serif text-[13px] text-[#333] mb-2">
                   {item?.attributes?.Name}
                 </h3>
