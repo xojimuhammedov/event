@@ -23,10 +23,10 @@ const Header = () => {
         <div className="container">
           <ul className="flex gap-3 items-center">
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              <a href="#home">ANASAYFA</a>
+              <Link to="/">ANASAYFA</Link>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              <a href="#about">HAKKIMIZDA</a>
+              <Link to="/about">HAKKIMIZDA</Link>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
               <Link to={"/"}>

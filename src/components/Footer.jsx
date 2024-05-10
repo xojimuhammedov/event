@@ -9,7 +9,6 @@ const Footer = () => {
       .get("https://admin.lupinevent.com/api/contacts")
       .then((res) => {
         setRes(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => {
         console.log(err);

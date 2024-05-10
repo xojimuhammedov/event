@@ -7,15 +7,16 @@ import { Navigation } from "swiper/modules";
 import axios from "axios";
 import { BASE_URL } from "../url";
 import Header from "./Header";
+import { useLocation } from "react-router-dom";
 
 function Home() {
   const [res, setRes] = useState([]);
+  const location = useLocation();
   useEffect(() => {
     axios
       .get("https://admin.lupinevent.com/api/sliders?populate=*")
       .then((res) => {
         setRes(res.data.data);
-        console.log(res.data.data);
       })
       .catch((err) => {
         console.log(err);
@@ -40,12 +41,19 @@ function Home() {
               <img
                 src={`${BASE_URL}${item?.attributes?.Image?.data?.attributes?.url}`}
                 alt=""
-                className="header-images"
+                className={`header-images`}
+                style={{
+                  height: `${location.pathname === "/" ? "auto" : "350px"}`,
+                }}
               />
-              <div className="carousel-caption">
-                <h1>{item?.attributes?.Title}</h1>
-                <p>{item?.attributes?.Description}</p>
-              </div>
+              {location.pathname === "/" ? (
+                <div className="carousel-caption">
+                  <h1>{item?.attributes?.Title}</h1>
+                  <p>{item?.attributes?.Description}</p>
+                </div>
+              ) : (
+                ""
+              )}
             </SwiperSlide>
           ))}
         </Swiper>
