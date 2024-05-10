@@ -19,14 +19,14 @@ function AboutUs() {
     <div className="px-40 py-12 service-about">
       {" "}
       <div className="flex mainWrapper mt-4">
-        <div className="">
+        <div className="w-1/2">
           <img
             src={`${BASE_URL}${resAbout[0]?.attributes?.Image?.data?.attributes?.url}`}
             alt="HAYALLERİNİZİ BİRLİKTE YARATIYORUZ"
-            className="main-image-about"
+            className="main-image"
           />
         </div>
-        <div className="px-4 pt-20">
+        <div className="px-4 w-1/2 pt-20">
           <h2 className="font-medium font-serif leading-6 text-[20px] text-[#434343] mainText">
             ›› BİZ KİMİZ ?
           </h2>
