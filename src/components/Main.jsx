@@ -35,7 +35,7 @@ const Main = () => {
                 {item?.attributes?.Description}
               </p>
               <Link
-                className="bg-black text-white font-medium text-base px-10 py-3 rounded-full"
+                className="bg-black text-white font-medium text-base px-10 py-[10px] rounded-full"
                 to={"/about"}>
                 Köpräk oka
               </Link>
