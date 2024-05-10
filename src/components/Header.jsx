@@ -46,7 +46,7 @@ const Header = () => {
               </ul>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
-              <a href="#contact">İLETİŞİM</a>
+              <Link to={"/"}>İLETİŞİM</Link>
             </li>
           </ul>
         </div>
@@ -78,33 +78,25 @@ const Header = () => {
         } fixed z-50 bg-white px-8 py-12 min-h-screen`}>
         <ul className="flex gap-3 items-center flex-col ">
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-            ANASAYFA
+            <Link to="/">ANASAYFA</Link>
           </li>
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-            HAKKIMIZDA
+            <Link to="/about">HAKKIMIZDA</Link>
           </li>
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown border-b border-transparent hover:border-black duration-300">
-            <p className="dropp py-2">HİZMETLERİMİZ</p>
+            <p className="dropp py-2">HİZMETLERİMİZ</p>{" "}
             <ul class="dropdown-content px-3 py-2 ">
-              <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
-                Kina Organizasyonu
-              </li>
-              <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                Nisan Ve Söz Organizasyonu
-              </li>
-              <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                Evlenme Teklifi Organizasyonu
-              </li>
-              <li className="text-xs font-light text-center border-b border-black py-2 hover:text-[#403e3e]">
-                Beklarliga Veda
-              </li>
-              <li className="text-xs font-light text-center  py-2 hover:text-[#403e3e]">
-                İsteme Organizasyonu
-              </li>
+              {res?.map((item) => (
+                <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
+                  <Link to={`/services/${item?.id}`}>
+                    {item?.attributes?.Title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </li>
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-            <a href="#contact">İLETİŞİM</a>
+            <Link to={"/"}>İLETİŞİM</Link>
           </li>
         </ul>
         <button

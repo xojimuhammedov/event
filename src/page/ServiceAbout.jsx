@@ -19,7 +19,7 @@ function ServiceAbout() {
   }, [id]);
 
   return (
-    <div className="px-40 py-12">
+    <div className="px-40 py-12 service-about">
       <div className="flex justify-center flex-col relative z-10">
         <h3 className="text-center text-lg pb-4 font-serif">
           {" "}
@@ -40,12 +40,15 @@ function ServiceAbout() {
             className="main-image-about"
           />
         </div>
-        <div className="px-4">
+        <div className="px-4 service-right">
           <p className="text-lg font-serif  text-[#434343]">
             {res?.attributes?.Name}
           </p>
           <p className="text-lg mt-2 font-serif  text-[#434343]">
             {res?.attributes?.Organization}
+          </p>
+          <p className="text-xs mt-4 font-serif leading-6 text-[#434343]">
+            {res?.attributes?.Description}
           </p>
         </div>
       </div>

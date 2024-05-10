@@ -102,4 +102,14 @@ html {
     width: 50px;
     display: flex;
   }
+
+  .service-about{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .service-right{
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 10px;
+  }
 }

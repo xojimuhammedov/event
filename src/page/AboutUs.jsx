@@ -16,7 +16,7 @@ function AboutUs() {
   }, []);
 
   return (
-    <div className="px-40 py-12">
+    <div className="px-40 py-12 service-about">
       {" "}
       <div className="flex mainWrapper mt-4">
         <div className="">
