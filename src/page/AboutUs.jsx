@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../url";
+import Img10 from "../assets/img10.png";
 
 function AboutUs() {
   const [resAbout, setResAbout] = useState([]);
@@ -17,7 +18,14 @@ function AboutUs() {
 
   return (
     <div className="px-40 py-12 service-about">
-      {" "}
+      <div className="flex justify-center flex-col relative z-10">
+        <h3 className="text-center text-lg font-bold font-serif"> HAKKIMIZDA</h3>
+        <img
+          style={{ objectFit: "cover", width: 350, margin: "0 auto" }}
+          src={Img10}
+          alt="img"
+        />
+      </div>{" "}
       <div className="flex mainWrapper mt-4">
         <div className="w-1/2">
           <img

@@ -21,7 +21,7 @@ function ServiceAbout() {
   return (
     <div className="px-40 py-12 service-about">
       <div className="flex justify-center flex-col relative z-10">
-        <h3 className="text-center text-lg pb-4 font-serif">
+        <h3 className="text-center text-lg font-bold font-serif">
           {" "}
           {res?.attributes?.Title}
         </h3>
