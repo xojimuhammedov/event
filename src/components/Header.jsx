@@ -22,22 +22,24 @@ const Header = () => {
       <nav className="absolute z-10 translate-x-[385px] navbar">
         <div className="container">
           <ul className="flex gap-3 items-center">
-            <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
+            <li className="font-bold leading-5 text-xl text-black font-serif hover:cursor-pointer">
               <Link to="/">ANASAYFA</Link>
             </li>
-            <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
+            <li className="font-bold text-xl leading-5 text-black font-serif hover:cursor-pointer">
               <Link to="/about">HAKKIMIZDA</Link>
             </li>
-            <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
+            <li className="font-bold text-xl leading-5 text-black font-serif hover:cursor-pointer">
               <Link to={"/"}>
                 <img alt="" src={Logo} className="w-[250px]" />
               </Link>
             </li>
-            <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown">
-              <p className="dropp py-2">HİZMETLERİMİZ</p>{" "}
+            <li className="font-bold text-xl leading-5 text-black font-serif hover:cursor-pointer dropdown">
+              <p className="dropp py-2">
+                <Link to={"/service"}>HİZMETLERİMİZ</Link>
+              </p>{" "}
               <ul class="dropdown-content px-3 py-2 ">
                 {res?.map((item) => (
-                  <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
                     <Link to={`/services/${item?.id}`}>
                       {item?.attributes?.Title}
                     </Link>
@@ -45,7 +47,7 @@ const Header = () => {
                 ))}
               </ul>
             </li>
-            <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer">
+            <li className="font-bold leading-5 text-xl text-black font-serif hover:cursor-pointer">
               <Link to={"/"}>İLETİŞİM</Link>
             </li>
           </ul>
@@ -84,7 +86,9 @@ const Header = () => {
             <Link to="/about">HAKKIMIZDA</Link>
           </li>
           <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown border-b border-transparent hover:border-black duration-300">
-            <p className="dropp py-2">HİZMETLERİMİZ</p>{" "}
+            <p className="dropp py-2">
+              <Link to={"/service"}>HİZMETLERİMİZ</Link>
+            </p>{" "}
             <ul class="dropdown-content px-3 py-2 ">
               {res?.map((item) => (
                 <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">

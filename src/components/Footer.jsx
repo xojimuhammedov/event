@@ -25,22 +25,22 @@ const Footer = () => {
             </div>
 
             <div className="text-white font-serif">
-              <p className="text-center tracking-widest">
+              <p className="text-center text-lg tracking-widest">
                 {res[0]?.attributes?.Address}
               </p>
               <ul className="text-center tracking-widest">
-                <li className="hover:cursor-pointer hover:text-gray-400">
+                <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   <a href={`mailto:${res[0]?.attributes?.Email}`}>
                     {res[0]?.attributes?.Email}
                   </a>
                 </li>
-                <li className="hover:cursor-pointer hover:text-gray-400">
+                <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
                   <a href={`tel:${res[0]?.attributes?.PhoneNumber_One}`}>
                     {res[0]?.attributes?.PhoneNumber_One}
                   </a>
                 </li>
-                <li className="hover:cursor-pointer hover:text-gray-400">
+                <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
                   <a href={`tel:${res[0]?.attributes?.PhoneNumber_Two}`}>
                     {res[0]?.attributes?.PhoneNumber_Two}
@@ -57,7 +57,7 @@ const Footer = () => {
           <div className="px-40 flex items-center gap-4 mt-4">
             <a
               className="footer-links"
-              target="_blank"
+              target={"_blank"}
               href={`https://www.tiktok.com/${res[0]?.attributes?.TikTok}`}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"

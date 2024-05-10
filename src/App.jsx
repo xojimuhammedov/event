@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import { Route, Routes } from "react-router-dom";
 import ServiceAbout from "./page/ServiceAbout";
 import AboutUs from "./page/AboutUs";
+import Service from "./page/Service";
 
 function App() {
   return (
@@ -22,7 +23,16 @@ function App() {
             </>
           }
         />
-        <Route path="*" element={<h1>404 Not Found</h1>} />
+        <Route
+          path="/service"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Service />
+            </>
+          }
+        />
         <Route
           path="/services/:id"
           element={
@@ -43,6 +53,7 @@ function App() {
             </>
           }
         />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
       <Footer />
     </>

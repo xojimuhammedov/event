@@ -19,7 +19,10 @@ function AboutUs() {
   return (
     <div className="px-40 py-12 service-about">
       <div className="flex justify-center flex-col relative z-10">
-        <h3 className="text-center text-lg font-bold font-serif"> HAKKIMIZDA</h3>
+        <h3 className="text-center text-2xl font-bold font-serif">
+          {" "}
+          HAKKIMIZDA
+        </h3>
         <img
           style={{ objectFit: "cover", width: 350, margin: "0 auto" }}
           src={Img10}
@@ -43,7 +46,7 @@ function AboutUs() {
           </p>
         </div>
       </div>
-      <p className="text-xs mt-4 font-serif leading-6 text-[#434343]">
+      <p className="text-lg mt-4 font-serif leading-8 text-[#434343]">
         {resAbout[0]?.attributes?.Description}
       </p>
     </div>
