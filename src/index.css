@@ -165,7 +165,7 @@
 
   .cartContainer {
     flex-direction: column;
-    gap: 10px;
+    gap: 80px;
   }
 
   .textContainer {
@@ -181,6 +181,7 @@
 
   .mainWrapper {
     flex-direction: column;
+    width: 100%;
   }
 
   .mainWrapper > div {
@@ -302,9 +303,9 @@
   }
 
   .textContainer {
-    margin-left: 0;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    margin-left: 55px;
+    /* padding-left: 10px !important; */
+    /* padding-right: 10px !important; */
   }
   .footerText {
     line-height: 1.5rem;

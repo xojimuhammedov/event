@@ -89,6 +89,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.images{
+  height: 350px;
+}
+
 @media (max-width: 500px) {
   .carousel-caption {
     left: 0;
@@ -111,5 +115,8 @@ html {
     padding-left: 10px !important;
     padding-right: 10px !important;
     margin-top: 10px;
+  }
+  .header-images{
+    height: 450px;
   }
 }

@@ -23,6 +23,7 @@ function Home() {
       });
   }, []);
 
+  console.log(location.pathname);
   return (
     <div className="carousel slide ">
       <Header />
@@ -41,10 +42,12 @@ function Home() {
               <img
                 src={`${BASE_URL}${item?.attributes?.Image?.data?.attributes?.url}`}
                 alt=""
-                className={`header-images`}
-                style={{
-                  height: `${location.pathname === "/" ? "auto" : "350px"}`,
-                }}
+                className={`header-images ${
+                  location.pathname === "/" ? "" : "images"
+                }`}
+                // style={{
+                //   height: `${location.pathname === "/" ? "100%" : "350px"}`,
+                // }}
               />
               {location.pathname === "/" ? (
                 <div className="carousel-caption">
