@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/logo.jpg";
 import InstagramIcon from "../assets/instagram.png";
 import axios from "axios";
 const Footer = () => {
@@ -21,11 +21,11 @@ const Footer = () => {
         <div className="container">
           <div className="px-40 flex items-center justify-between footerWrapper">
             <div>
-              <img src={Logo} alt="company logo" width={"240px"} />
+              <img src={Logo} alt="company logo" width={"350px"} />
             </div>
 
             <div className="text-white font-serif">
-              <p className="text-center text-lg tracking-widest">
+              <p className="text-center text-lg w-75 m-auto tracking-widest">
                 {res[0]?.attributes?.Address}
               </p>
               <ul className="text-center tracking-widest">
