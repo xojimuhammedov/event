@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../assets/logo.jpg";
+import Logo from "../assets/event-removebg-preview.png";
 import InstagramIcon from "../assets/instagram.png";
 import axios from "axios";
 const Footer = () => {
