@@ -25,7 +25,7 @@ const Footer = () => {
             </div>
 
             <div className="text-white font-serif">
-              <p className="text-center text-lg  w-50 m-auto  mb-3 tracking-widest">
+              <p className="text-center footer-text text-lg  w-50 m-auto  mb-3 tracking-widest">
                 {res[0]?.attributes?.Address}
               </p>
               <ul className="text-center flex flex-column gap-3 tracking-widest">

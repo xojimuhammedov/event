@@ -119,4 +119,8 @@ html {
   .header-images{
     height: 450px;
   }
+
+  .footer-text{
+    width: 100% !important;
+  }
 }

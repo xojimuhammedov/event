@@ -97,7 +97,9 @@ const Header = () => {
               <ul class="dropdown-content px-3 py-2 ">
                 {res?.map((item) => (
                   <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services/${item?.id}`}>
+                    <Link
+                      onClick={() => setOpenMenuBar(false)}
+                      to={`/services/${item?.id}`}>
                       {item?.attributes?.Title}
                     </Link>
                   </li>
