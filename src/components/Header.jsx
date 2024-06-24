@@ -86,7 +86,9 @@ const Header = () => {
               <Link to="/">ANASAYFA</Link>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-              <Link to="/about">HAKKIMIZDA</Link>
+              <Link onClick={() => setOpenMenuBar(false)} to="/about">
+                HAKKIMIZDA
+              </Link>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown border-b border-transparent hover:border-black duration-300">
               <p className="dropp py-2">
@@ -103,7 +105,12 @@ const Header = () => {
               </ul>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
-              <Link onClick={() => window.scrollTo({ top: 1800 })} to={"/"}>
+              <Link
+                onClick={() => {
+                  setOpenMenuBar(false);
+                  window.scrollTo({ top: 2800 });
+                }}
+                to={"/"}>
                 İLETİŞİM
               </Link>
             </li>

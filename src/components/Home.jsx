@@ -23,7 +23,6 @@ function Home() {
       });
   }, []);
 
-  console.log(location.pathname);
   return (
     <div className="carousel slide ">
       <Header />
@@ -45,9 +44,6 @@ function Home() {
                 className={`header-images ${
                   location.pathname === "/" ? "" : "images"
                 }`}
-                // style={{
-                //   height: `${location.pathname === "/" ? "100%" : "350px"}`,
-                // }}
               />
               {location.pathname === "/" ? (
                 <div className="carousel-caption">

@@ -37,7 +37,7 @@ const Main = () => {
               <Link
                 className="bg-black text-white font-medium text-base px-10 py-[10px] rounded-full"
                 to={"/about"}>
-                Köpräk oka
+                Devamı
               </Link>
             </div>
           </div>
