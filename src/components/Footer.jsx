@@ -26,7 +26,7 @@ const Footer = () => {
 
             <div className="text-white font-serif">
               <p className="text-center footer-text text-lg  w-50 m-auto  mb-3 tracking-widest">
-                {res[0]?.attributes?.Address}
+               Oruç reis mahallesi şehit Cevdet caddesi no 12 esenler/istanbul
               </p>
               <ul className="text-center flex flex-column gap-3 tracking-widest">
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
@@ -36,14 +36,14 @@ const Footer = () => {
                 </li>
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
-                  <a href={`tel:${res[0]?.attributes?.PhoneNumber_One}`}>
-                    {res[0]?.attributes?.PhoneNumber_One}
+                  <a href={`tel:+905461064158`}>
+                    +90 546 106 41 58
                   </a>
                 </li>
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
-                  <a href={`tel:${res[0]?.attributes?.PhoneNumber_Two}`}>
-                    {res[0]?.attributes?.PhoneNumber_Two}
+                  <a href={`tel:+905317318695`}>
+                   +90 531 731 86 95
                   </a>
                 </li>
               </ul>
