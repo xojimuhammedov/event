@@ -58,7 +58,7 @@ const Footer = () => {
             <a
               className="footer-links"
               target="_blank"
-              href={`https://www.tiktok.com/${res[0]?.attributes?.TikTok}`}>
+              href={'https://www.tiktok.com/@lupineventorganizasyon?_t=8qo8lTMBM6H&_r=1'}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"
                 className="w-[50px] footer-icons"
@@ -68,7 +68,7 @@ const Footer = () => {
             <a
               className="footer-links"
               target="_blank"
-              href={`https://www.instagram.com/${res[0]?.attributes?.Instagram}`}>
+              href={'https://www.instagram.com/lupinevent/profilecard/?igsh=c280cGlleWR0cTZh'}>
               <img
                 src={InstagramIcon}
                 className="w-[50px] footer-icons"
