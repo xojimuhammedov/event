@@ -19,9 +19,9 @@ const SelectedService = () => {
   return (
     <div id="service" className="selectedService px-40 pb-4">
       <div className="container">
-        <div className="flex justify-center relative z-10">
+        {/* <div className="flex justify-center relative z-10">
           <img src={Img10} alt="img" />
-        </div>
+        </div> */}
         <h3 className="text-center pb-4 text-lg font-serif">ÖNE ÇIKAN HİZMETLER</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 cartContainer flex-wrap">
           {res?.map((item, index) => (

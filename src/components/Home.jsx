@@ -36,25 +36,24 @@ function Home() {
           modules={[Navigation]}
           loop={true}
           className="mySwiper">
-          {res?.map((item) => (
-            <SwiperSlide>
-              <img
-                src={`${BASE_URL}${item?.attributes?.Image?.data?.attributes?.url}`}
-                alt=""
-                className={`header-images ${
-                  location.pathname === "/" ? "" : "images"
+          {/* {res?.map((item) => ( */}
+          <SwiperSlide>
+            <img
+              src={"https://i.pinimg.com/originals/5c/cf/15/5ccf15a7745e0945ca3e3e2efb464159.jpg"}
+              alt=""
+              className={`header-images ${location.pathname === "/" ? "" : "images"
                 }`}
-              />
-              {location.pathname === "/" ? (
-                <div className="carousel-caption">
-                  <h1>{item?.attributes?.Title}</h1>
-                  <p>{item?.attributes?.Description}</p>
-                </div>
-              ) : (
-                ""
-              )}
-            </SwiperSlide>
-          ))}
+            />
+            {location.pathname === "/" ? (
+              <div className="carousel-caption">
+                <h1 className="text-[#333] font-medium">{"LUPINEVENT"}</h1>
+                <p className="text-[#333]">{"Güzellik ve zarafet"}</p>
+              </div>
+            ) : (
+              ""
+            )}
+          </SwiperSlide>
+          {/* ))} */}
         </Swiper>
       </div>
     </div>

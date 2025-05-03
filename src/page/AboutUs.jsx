@@ -4,17 +4,17 @@ import { BASE_URL } from "../url";
 import Img10 from "../assets/img10.png";
 
 function AboutUs() {
-  const [resAbout, setResAbout] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://admin.lupinevent.com/api/about-uses?populate=*")
-      .then((res) => {
-        setResAbout(res.data.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  // const [resAbout, setResAbout] = useState([]);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://admin.lupinevent.com/api/about-uses?populate=*")
+  //     .then((res) => {
+  //       setResAbout(res.data.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   return (
     <div className="px-40 py-12 service-about">
@@ -23,16 +23,16 @@ function AboutUs() {
           {" "}
           HAKKIMIZDA
         </h3>
-        <img
+        {/* <img
           style={{ objectFit: "cover", width: 350, margin: "0 auto" }}
           src={Img10}
           alt="img"
-        />
+        /> */}
       </div>{" "}
       <div className="flex mainWrapper mt-4">
         <div className="w-1/2">
           <img
-            src={`${BASE_URL}${resAbout[0]?.attributes?.Image?.data?.attributes?.url}`}
+            src={'https://i.etsystatic.com/23583625/r/il/a31e02/2377173760/il_fullxfull.2377173760_9i9f.jpg'}
             alt="HAYALLERİNİZİ BİRLİKTE YARATIYORUZ"
             className="main-image"
           />
@@ -42,12 +42,12 @@ function AboutUs() {
             ›› BİZ KİMİZ ?
           </h2>
           <p className="text-lg font-serif mt-2 text-[#434343]">
-            {resAbout[0]?.attributes?.Title}
+            {/* {resAbout[0]?.attributes?.Title} */}
           </p>
         </div>
       </div>
       <p className="text-lg mt-4 font-serif leading-8 text-[#434343]">
-        {resAbout[0]?.attributes?.Description}
+        Hayalleriniz bizim için ilham kaynağıdır. Her detaya özen göstererek, tam da istediğiniz gibi güzel, özgün ve unutulmaz anları birlikte yaratıyoruz.
       </p>
     </div>
   );

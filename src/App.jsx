@@ -18,7 +18,7 @@ function App() {
           element={
             <>
               <Home />
-              <SelectedService />
+              {/* <SelectedService /> */}
               <Main />
             </>
           }
