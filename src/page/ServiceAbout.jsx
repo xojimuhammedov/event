@@ -3,27 +3,19 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BASE_URL } from "../url";
 import Img10 from "../assets/img10.png";
+import { serviceData } from "../data";
 
 function ServiceAbout() {
   const { id } = useParams();
-  const [res, setRes] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`https://admin.lupinevent.com/api/services/${id}?populate=*`)
-      .then((res) => {
-        setRes(res.data.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, [id]);
+
+  const aboutData = serviceData?.find((item) => item?.id === Number(id))
 
   return (
     <div className="px-40 py-12 service-about">
       <div className="flex justify-center flex-col relative z-10">
         <h3 className="text-center text-2xl font-bold font-serif">
           {" "}
-          {res?.attributes?.Title}
+          {aboutData.title}
         </h3>
         <img
           style={{ objectFit: "cover", width: 350, margin: "0 auto" }}
@@ -33,23 +25,22 @@ function ServiceAbout() {
       </div>
 
       <div className="flex mainWrapper mt-4">
-        <div className="">
+        <div className="w-full">
           <img
-            src={`${BASE_URL}${res?.attributes?.Image?.data?.attributes?.url}`}
+            src={aboutData?.imageUrl}
             alt="HAYALLERİNİZİ BİRLİKTE YARATIYORUZ"
             className="main-image-about"
           />
         </div>
         <div className="px-4 service-right">
-          <p className="text-lg font-serif  text-[#434343]">
-            {res?.attributes?.Name}
-          </p>
           <p className="text-lg mt-2 font-serif  text-[#434343]">
-            {res?.attributes?.Organization}
+            {aboutData?.organisition}
           </p>
-          <p className="text-xs mt-4 font-serif leading-6 text-[#434343]">
-            {res?.attributes?.Description}
-          </p>
+          <p className="text-base mt-4 font-serif leading-6 text-[#434343]"
+            dangerouslySetInnerHTML={{
+              __html: aboutData?.description
+            }}
+          />
         </div>
       </div>
     </div>

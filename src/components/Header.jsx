@@ -41,27 +41,27 @@ const Header = () => {
                 <ul class="dropdown-content px-3 py-2 ">
                   {/* {res?.map((item) => ( */}
                   <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services`}>
+                    <Link to={`/services/1`}>
                       Kına Organizasyonu
                     </Link>
                   </li>
                   <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services`}>
+                    <Link to={`/services/2`}>
                       Nişan ve Söz Organizasyonu
                     </Link>
                   </li>
                   <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services`}>
+                    <Link to={`/services/3`}>
                       İsteme Organizasyonu
                     </Link>
                   </li>
                   <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services`}>
+                    <Link to={`/services/4`}>
                       Bekarlığa Veda
                     </Link>
                   </li>
                   <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services`}>
+                    <Link to={`/services/5`}>
                       Açılış Organizasyonu
                     </Link>
                   </li>
@@ -111,31 +111,31 @@ const Header = () => {
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer dropdown border-b border-transparent hover:border-black duration-300">
               <p className="dropp py-2">
-                <Link to={"/service"}>HİZMETLERİMİZ</Link>
+                <Link onClick={() => setOpenMenuBar(false)} to={"/service"}>HİZMETLERİMİZ</Link>
               </p>{" "}
               <ul class="dropdown-content px-3 py-2">
                 <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services`}>
+                  <Link to={`/services/1`}>
                     Kına Organizasyonu
                   </Link>
                 </li>
                 <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services`}>
+                  <Link to={`/services/2`}>
                     Nişan ve Söz Organizasyonu
                   </Link>
                 </li>
                 <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services`}>
+                  <Link to={`/services/3`}>
                     İsteme Organizasyonu
                   </Link>
                 </li>
                 <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services`}>
+                  <Link to={`/services/4`}>
                     Bekarlığa Veda
                   </Link>
                 </li>
                 <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services`}>
+                  <Link to={`/services/5`}>
                     Açılış Organizasyonu
                   </Link>
                 </li>
