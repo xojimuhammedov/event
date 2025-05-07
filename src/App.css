@@ -76,11 +76,12 @@
 .selected-image {
   height: 500px !important;
   width: 100% !important;
+  object-fit: cover;
 }
 
 .main-image {
   height: 500px;
-  width: 95%;
+  width: 100%;
   object-fit: cover;
 }
 
