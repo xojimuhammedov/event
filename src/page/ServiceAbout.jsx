@@ -1,7 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { BASE_URL } from "../url";
 import Img10 from "../assets/img10.png";
 import { serviceData } from "../data";
 
