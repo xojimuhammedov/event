@@ -39,13 +39,33 @@ const Header = () => {
                   <Link to={"/service"}>HİZMETLERİMİZ</Link>
                 </p>{" "}
                 <ul class="dropdown-content px-3 py-2 ">
-                  {res?.map((item) => (
-                    <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                      <Link to={`/services/${item?.id}`}>
-                        {item?.attributes?.Title}
-                      </Link>
-                    </li>
-                  ))}
+                  {/* {res?.map((item) => ( */}
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services`}>
+                      Kına Organizasyonu
+                    </Link>
+                  </li>
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services`}>
+                      Nişan ve Söz Organizasyonu
+                    </Link>
+                  </li>
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services`}>
+                      İsteme Organizasyonu
+                    </Link>
+                  </li>
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services`}>
+                      Bekarlığa Veda
+                    </Link>
+                  </li>
+                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                    <Link to={`/services`}>
+                      Açılış Organizasyonu
+                    </Link>
+                  </li>
+                  {/* ))} */}
                 </ul>
               </li>
               <li className="font-bold leading-5 text-xl text-black font-serif hover:cursor-pointer">
@@ -78,9 +98,8 @@ const Header = () => {
           </button>
         </div>
         <div
-          className={`${
-            openMenuBar ? "openMenu" : "closeMenu"
-          } fixed z-50 bg-white px-8 py-12 min-h-screen`}>
+          className={`${openMenuBar ? "openMenu" : "closeMenu"
+            } fixed z-50 bg-white px-8 py-12 min-h-screen`}>
           <ul className="flex gap-3 items-center flex-col ">
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
               <Link to="/">ANASAYFA</Link>

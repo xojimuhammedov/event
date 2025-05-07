@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.service-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* faqat 2 qatordan oshmasin */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,6 +41,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -48,12 +58,14 @@
   z-index: 9999;
   top: 50%;
 }
+
 .carousel-caption h1 {
   font-size: 50px;
   line-height: 55px;
   font-weight: 600;
   font-family: sans-serif;
 }
+
 .carousel-caption p {
   font-size: 20px;
   line-height: 24px;
@@ -63,7 +75,7 @@
 
 .selected-image {
   height: 500px !important;
-  width: 450px !important;
+  width: 100% !important;
 }
 
 .main-image {
@@ -89,7 +101,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.images{
+.images {
   height: 350px;
 }
 
@@ -102,25 +114,28 @@ html {
   .footer-icons {
     width: 50px !important;
   }
+
   .footer-links {
     width: 50px;
     display: flex;
   }
 
-  .service-about{
+  .service-about {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .service-right{
+
+  .service-right {
     padding-left: 10px !important;
     padding-right: 10px !important;
     margin-top: 10px;
   }
-  .header-images{
+
+  .header-images {
     height: 450px;
   }
 
-  .footer-text{
+  .footer-text {
     width: 100% !important;
   }
 }
