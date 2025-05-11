@@ -9,9 +9,9 @@ const Header = () => {
   const [res, setRes] = useState([]);
   useEffect(() => {
     axios
-      .get("https://admin.lupinevent.com/api/services")
+      .get("https://room.oqdev.uz/api/items/")
       .then((res) => {
-        setRes(res.data.data);
+        setRes(res?.data?.results);
       })
       .catch((err) => {
         console.log(err);
@@ -40,12 +40,16 @@ const Header = () => {
                 </p>{" "}
                 <ul class="dropdown-content px-3 py-2 ">
                   {/* {res?.map((item) => ( */}
-                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link to={`/services/1`}>
-                      Kına Organizasyonu
-                    </Link>
-                  </li>
-                  <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                  {
+                    res?.map((item) => (
+                      <li key={item?.id} className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
+                        <Link to={`/services/${item?.id}`}>
+                          {item?.title}
+                        </Link>
+                      </li>
+                    ))
+                  }
+                  {/* <li className=" border-b text-base border-black py-2 font-light text-center hover:text-[#403e3e]">
                     <Link to={`/services/2`}>
                       Nişan ve Söz Organizasyonu
                     </Link>
@@ -64,7 +68,7 @@ const Header = () => {
                     <Link to={`/services/5`}>
                       Açılış Organizasyonu
                     </Link>
-                  </li>
+                  </li> */}
                   {/* ))} */}
                 </ul>
               </li>
@@ -114,40 +118,15 @@ const Header = () => {
                 <Link onClick={() => setOpenMenuBar(false)} to={"/service"}>HİZMETLERİMİZ</Link>
               </p>{" "}
               <ul class="dropdown-content px-3 py-2">
-                <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services/1`}>
-                    Kına Organizasyonu
-                  </Link>
-                </li>
-                <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services/2`}>
-                    Nişan ve Söz Organizasyonu
-                  </Link>
-                </li>
-                <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services/3`}>
-                    İsteme Organizasyonu
-                  </Link>
-                </li>
-                <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services/4`}>
-                    Bekarlığa Veda
-                  </Link>
-                </li>
-                <li className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
-                  <Link to={`/services/5`}>
-                    Açılış Organizasyonu
-                  </Link>
-                </li>
-                {/* {res?.map((item) => (
-                  <li className="text-xs border-b border-black py-2 font-light text-center hover:text-[#403e3e]">
-                    <Link
-                      onClick={() => setOpenMenuBar(false)}
-                      to={`/services/${item?.id}`}>
-                      {item?.attributes?.Title}
-                    </Link>
-                  </li>
-                ))} */}
+                {
+                  res?.map((item) => (
+                    <li key={item?.id} className=" border-b text-xs border-black py-2 font-light text-center hover:text-[#403e3e]">
+                      <Link to={`/services/${item?.id}`}>
+                        {item?.title}
+                      </Link>
+                    </li>
+                  ))
+                }
               </ul>
             </li>
             <li className="font-bold leading-5 text-black font-serif hover:cursor-pointer border-b border-transparent hover:border-black duration-300">
