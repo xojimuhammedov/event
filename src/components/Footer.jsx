@@ -6,9 +6,9 @@ const Footer = () => {
   const [res, setRes] = useState([]);
   useEffect(() => {
     axios
-      .get("https://admin.lupinevent.com/api/contacts")
+      .get("https://room.oqdev.uz/api/contact")
       .then((res) => {
-        setRes(res.data.data);
+        setRes(res?.data?.results);
       })
       .catch((err) => {
         console.log(err);
@@ -26,7 +26,7 @@ const Footer = () => {
 
             <div className="text-white font-serif">
               <p className="text-center footer-text text-lg  w-50 m-auto  mb-3 tracking-widest">
-               Oruç reis mahallesi şehit Cevdet caddesi no 12 esenler/istanbul
+                 {res?.[0]?.location}
               </p>
               <ul className="text-center flex flex-column gap-3 tracking-widest">
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
@@ -36,14 +36,14 @@ const Footer = () => {
                 </li>
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
-                  <a href={`tel:+905461064158`}>
-                    +90 546 106 41 58
+                  <a href={`tel:${res?.[0]?.phoneNumber}`}>
+                  {res?.[0]?.phoneNumber}
                   </a>
                 </li>
                 <li className="hover:cursor-pointer text-lg hover:text-gray-400">
                   {" "}
-                  <a href={`tel:+905317318695`}>
-                   +90 531 731 86 95
+                  <a href={`tel:${res?.[0]?.phoneNumberTwo}`}>
+                  {res?.[0]?.phoneNumberTwo}
                   </a>
                 </li>
               </ul>
@@ -58,7 +58,7 @@ const Footer = () => {
             <a
               className="footer-links"
               target="_blank"
-              href={'https://www.tiktok.com/@lupineventorganizasyon?_t=8qo8lTMBM6H&_r=1'}>
+              href={res?.[0]?.tikTokLink}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/15059/15059942.png"
                 className="w-[50px] footer-icons"
@@ -68,7 +68,7 @@ const Footer = () => {
             <a
               className="footer-links"
               target="_blank"
-              href={'https://www.instagram.com/lupinevent/profilecard/?igsh=c280cGlleWR0cTZh'}>
+              href={res?.[0]?.instagramLink}>
               <img
                 src={InstagramIcon}
                 className="w-[50px] footer-icons"
