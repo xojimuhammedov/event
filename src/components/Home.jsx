@@ -14,9 +14,9 @@ function Home() {
   const location = useLocation();
   useEffect(() => {
     axios
-      .get("https://admin.lupinevent.com/api/sliders?populate=*")
+      .get("https://room.oqdev.uz/api/hero/")
       .then((res) => {
-        setRes(res.data.data);
+        setRes(res?.data?.results);
       })
       .catch((err) => {
         console.log(err);
@@ -36,24 +36,24 @@ function Home() {
           modules={[Navigation]}
           loop={true}
           className="mySwiper">
-          {/* {res?.map((item) => ( */}
+          {res?.map((item) => (
           <SwiperSlide>
             <img
-              src={"https://i.pinimg.com/originals/5c/cf/15/5ccf15a7745e0945ca3e3e2efb464159.jpg"}
+              src={item?.image}
               alt=""
               className={`header-images ${location.pathname === "/" ? "" : "images"
                 }`}
             />
             {location.pathname === "/" ? (
               <div className="carousel-caption">
-                <h1 className="text-[#333] font-medium">{"LUPINEVENT"}</h1>
-                <p className="text-[#333]">{"Güzellik ve zarafet"}</p>
+                <h1 className="text-[#333] font-medium">{item?.title}</h1>
+                <p className="text-[#333]">{item?.name}</p>
               </div>
             ) : (
               ""
             )}
           </SwiperSlide>
-          {/* ))} */}
+          ))}
         </Swiper>
       </div>
     </div>
